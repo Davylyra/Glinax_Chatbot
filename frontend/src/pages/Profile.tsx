@@ -32,7 +32,7 @@ const Profile: React.FC = () => {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://glinax-backend.onrender.com/api';
+        const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
         const token = localStorage.getItem('token');
         
         if (!token) {
