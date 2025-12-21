@@ -75,10 +75,10 @@ app.use('/api/config', (req, res) => {
     success: true,
     data: {
       appName: "Glinax Bot",
-      apiBaseUrl: "http://localhost:5000/api",
+      apiBaseUrl: process.env.BACKEND_URL || "https://glinax-backend.onrender.com/api",
       features: { enablePayments: true, enableUploads: true },
       // Add defaults for any specific keys frontend asks for
-      api_base_url: "http://localhost:5000/api",
+      api_base_url: process.env.BACKEND_URL || "https://glinax-backend.onrender.com/api",
       timeout: 10000
     }
   });

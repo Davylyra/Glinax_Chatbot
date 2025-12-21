@@ -37,7 +37,7 @@ const PaymentModal: React.FC<PaymentModalProps> = ({
   const [error, setError] = useState<string | null>(null);
   const [verifying, setVerifying] = useState(false);
 
-  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://glinax-backend.onrender.com/api';
 
   const paymentMethods = [
     {

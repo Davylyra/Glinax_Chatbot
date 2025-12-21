@@ -37,7 +37,7 @@ export const useSocket = () => {
       return;
     }
 
-    const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000';
+    const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://glinax-backend.onrender.com';
 
     console.log('🔌 Connecting to Socket.io server...', { userId: user.id });
 
@@ -164,7 +164,7 @@ export const useSocket = () => {
 
     // Call backend to persist read + 5s deletion scheduling
     try {
-      const API_BASE_URL = (import.meta as any).env?.VITE_API_BASE_URL || 'http://localhost:5000/api';
+      const API_BASE_URL = (import.meta as any).env?.VITE_API_BASE_URL || 'https://glinax-backend.onrender.com/api';
       const token = localStorage.getItem('token');
       const headers: Record<string, string> = { 'Content-Type': 'application/json' };
       if (token) headers['Authorization'] = `Bearer ${token}`;
